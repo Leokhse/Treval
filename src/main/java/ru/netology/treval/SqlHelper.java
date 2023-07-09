@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class SqlHelper {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/app";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/app";
     private static final String DB_USER = "app";
     private static final String DB_PASSWORD = "pass";
 
