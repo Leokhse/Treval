@@ -1,28 +1,20 @@
 package ru.netology.treval;
 
 import com.github.javafaker.Faker;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.time.LocalDate;
 
 public class DataHelper {
     private static Faker faker = new Faker();
 
+    @Data
+    @AllArgsConstructor
     public static class CardInfo {
         private String number;
         private String status;
 
-        public CardInfo(String number, String status) {
-            this.number = number;
-            this.status = status;
-        }
-
-        public String getNumber() {
-            return number;
-        }
-
-        public String getStatus() {
-            return status;
-        }
     }
 
     public static CardInfo getApprovedCard() {

@@ -6,9 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class SqlHelper {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/app";
-    private static final String DB_USER = "app";
-    private static final String DB_PASSWORD = "pass";
+    private static String DB_URL = System.getProperty("db.url", "jdbc:postgresql://localhost:5432/app");
+    private static String DB_USER = System.getProperty("db.username", "app");
+    private static String DB_PASSWORD = System.getProperty("db.password", "pass");
 
     public static boolean isPaymentStatusApproved() {
         return isStatusEquals("payment_entity", "APPROVED");
